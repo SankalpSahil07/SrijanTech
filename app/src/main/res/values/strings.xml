@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Srijan Tech</string>
+    <string name="username">Enter Username</string>
+    <string name="password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="enter_a_proper_user_name">Enter a proper user name</string>
+    <string name="password_not_meeting_the_criteria">Password not meeting the criteria</string>
+    <string name="hello">Hello</string>
+</resources>

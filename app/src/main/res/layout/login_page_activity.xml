@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".LoginPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+      <ImageView
+          android:id="@+id/imgLogo"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:src="@drawable/srijan"
+          android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:padding="10dp"
+        android:layout_below="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputLayoutUserName"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:drawablePadding="10dp"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:drawableStart="@drawable/ic_user_login"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/userNameStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_a_proper_user_name"
+            android:layout_below="@+id/inputLayoutUserName"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/red"
+            android:textSize="13sp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:padding="10dp"
+        android:id="@+id/inputLayoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputLayoutUserName"
+        android:layout_marginTop="30dp"
+        app:passwordToggleEnabled="true"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textWebPassword"
+            android:drawablePadding="10dp"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN
+           OPQRSTUVWXYZ"
+            android:drawableStart="@drawable/ic_user_password"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/passwordStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/red"
+            android:layout_below="@+id/inputLayoutPassword"
+            android:text="@string/password_not_meeting_the_criteria"/>
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_below="@+id/inputLayoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/fill_disable_button"
+            android:textColor="@color/white"
+            android:enabled="false"
+            android:text="@string/login"/>
+    </RelativeLayout>
+</LinearLayout>
+</layout>
